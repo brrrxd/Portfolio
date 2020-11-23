@@ -1,0 +1,113 @@
+.nappula{
+  background-color:000000;
+  padding:10px;
+  font-size:20px;
+  color:#FFFFFF;
+  list-style-type:none;
+}
+.nappula a{
+  text-decoration:none;
+  color:#FFFFFF;
+}
+.nappula li:hover{
+  background-color:FF0000;
+  border-bottom:1px dashed #000000;
+}
+.nappula li{
+  border-bottom:1px dashed #FFFFFF;
+}
+.nappula li:active{
+  background-color:#FFFFFF;
+  color:000000;
+}
+.nappula a:active{
+  color:000000;
+}
+.asemointi{
+  position:fixed;
+  top:40%;
+  right:0px;
+}
+.taulukko{
+border:1px solid;
+border-radius:10px;
+}
+.background{
+  border:1px solid;
+  border-radius:10px;
+}
+.background{
+  background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url(https://images.ctfassets.net/kt8yvydomzor/6Nn9cU5stkkhUzAyXm518o/5ff075365d1f4fa7b08779a8a46f09fb/KM_Kallio.jpg?w=1440&h=550&fit=fill&f=top);
+}
+.yhteydenotto label{
+  display:block;
+}
+.alue1{
+  width:70%;
+  margin:auto;
+  border:double 5px;
+  border-radius:10px;
+  padding:10px;
+  background-color:#FFF8A6;
+  color:#FF52ED;
+}
+.yhteydenotto input[type="text"], .yhteydenotto textarea{
+  padding:10px;
+  width:100%;
+}
+.yhteydenotto input[type="number"], .yhteydenotto number{
+  padding:10px;
+  width:100%;
+}
+.yhteydenotto input[type="email"], .yhteydenotto email{
+  padding:10px;
+  width:100%;
+}
+.yhteydenotto input[type="date"], .yhteydenotto date{
+  padding:10px;
+  width:100%;
+}
+.tausta{
+  background-color:#FFD8FB;
+}
+
+.laatikko{
+  background-color:#FFF8A6;
+  float:left;
+  width:24%;
+  border:5px double #FF52ED;
+  padding:10px;
+  box-sizing:border-box;
+  margin-top:40px;
+  margin-left:5px;
+  height:25%;
+}
+.kuva{
+  background-image:url(logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.asetukset{
+  position: fixed;
+  top:3%;
+  right:3%;
+}
+.boxi{
+  background-color:gray;
+  color:white;
+  position: fixed;
+  top:10%;
+  right:10%;
+  padding:10px;
+}
+ul{
+  list-style-type:none;
+  padding:0;
+  margin:0;
+}
