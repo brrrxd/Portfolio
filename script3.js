@@ -53,9 +53,9 @@ function sendJSON(){
   };
   var data =JSON.stringify({
     "EmailMsg": terveiset, //kirjoittaa sähköpostin sisällön
-    "EmailAddress": "wrewqr@gmail.com", //viestin kirjoittajan sähköpostin
+    "EmailAddress": pakemail, //viestin kirjoittajan sähköpostin
     "EmailTo": "matias.kallio@edu.salpaus.fi", //oma sähköpostin
-    "EmailName": "rwqr" //Nimi kentän sisältö
+    "EmailName": paknimi //Nimi kentän sisältö
   });
   xhr.send(data);
 };
