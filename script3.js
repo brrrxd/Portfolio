@@ -52,10 +52,10 @@ function sendJSON(){
     console.log("Valmis, yhteys toimii");
   };
   var data =JSON.stringify({
-    "EmailMsg": "qwe", //kirjoittaa sähköpostin sisällön
-    "EmailAddress": "saf@gmail.com", //viestin kirjoittajan sähköpostin
+    "EmailMsg": terveiset, //kirjoittaa sähköpostin sisällön
+    "EmailAddress": pakemail, //viestin kirjoittajan sähköpostin
     "EmailTo": "matias.kallio@edu.salpaus.fi", //oma sähköpostin
-    "EmailName": "wqe" //Nimi kentän sisältö
+    "EmailName": paknimi //Nimi kentän sisältö
   });
   xhr.send(data);
 };
