@@ -29,15 +29,14 @@ lahetanappi.addEventListener('click', e =>{
 
     paknimi.value= '';
     pakemail.value= '';
+    sendJSON();
   }
 });
-}
-window.onload=function(){
+
 const emailnappi = document.querySelector('.lahetanappi');
 
 emailnappi.addEventListener('click', e =>{
   e.preventDefault();
-  sendJSON();
 });
 
 function sendJSON(){
@@ -53,7 +52,7 @@ function sendJSON(){
     console.log("Valmis, yhteys toimii");
   };
   var data =JSON.stringify({
-    "EmailMsg": "qwqrewqr", //kirjoittaa sähköpostin sisällön
+    "EmailMsg": terveiset, //kirjoittaa sähköpostin sisällön
     "EmailAddress": "wrewqr@gmail.com", //viestin kirjoittajan sähköpostin
     "EmailTo": "matias.kallio@edu.salpaus.fi", //oma sähköpostin
     "EmailName": "rwqr" //Nimi kentän sisältö
