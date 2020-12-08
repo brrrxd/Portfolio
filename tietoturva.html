@@ -1,0 +1,28 @@
+<html>
+  <link rel="stylesheet" type="text/css" href="style3.css">
+  <head>
+    <title>Tietoturva</title>
+  </head>
+  <body>
+    <h1>Ajatuksia tietoturvasta</h1>
+    <h2>Botnet</h2>
+    <p>Botnet tarkoittaa kaapattuja tietokoneita, joita käytetään monenlaisten huijausten ja hyökkäysten toteuttamiseen. Robotit automaattisesti toteuttavat hyökkäyksiä kuten datan varastamista, servereiden tuhoamista ja virusten jakelua. Botnetin tarkoitus on nopeuttaa hakkereiden kykyä tehdä laajempia hyökkäyksiä. Pienen tiimin hakkereita on hyvin vaikeaa tehdä monta toimintaa samaan aikaan, mutta bottien avulla se on helppoa. Botnetin uhreina voivat olla mitkä tahansa laitteet, jotka käyttävät internettiä kuten läppärit, pöytäkoneet, puhelimet tai älylaitteet kuten valvontakamerat. Hyökkääjä ohjaa laitteita anonyymisti etäohjelmoinnilla. Kaikki laitteet ovat yhteydessä C&C (Command and control) serveriin, josta ne saavat käskyjä. Botnettejä voi johtaa joko keskitetyllä client-server modeleilla tai epäkeskitetyllä peer-to-peer modeleilla. Keskitetyt modelit toimivat yhden serverin avulla. Keskitetyllä hakkerilla on riski jäädä kiinni, joten sitä harvoin käytetään. Epäkeskitetyllä modelilla ohjaaja upottaa kaikille boteille käskyjä. Kunhan hakkeri saa kiinni yhteen bottiin ohjeet siirtyvät siitä muille. Tätä metodia käytetään nykyemmin useammin.</p> 
+    <h3>Mihin botnettiä käytetään?</h3>
+    <p>Botnettien omistajilla on aina jotain saatavana. Se voi olla esim rahan tai oman tyytyväisyyden vuoksi. Yleisimpiä ovat:</p>
+    <ul>
+      <li>Rahan varastaminen</li>
+      <li>Tiedon varastaminen</li>
+      <li>Palveluiden kuten nettisivujen sabotointi</li>
+      <li>Tiedon myynti muille rikollisille</li>
+    </ul>
+    <p>Suurin osa näistä ovat rahan tai muiden häiritsemisen vuoksi. Joissain tapauksissa rikolliset myyvät pääsyn suureen verkkoon täynnä botteja muille hakkereille. Jotkut myös perustavat botnettejä vain, koska he voivat.</p>
+    Lähteet: https://usa.kaspersky.com/resource-center/threats/botnet-attacks
+    <h2>Deep packet inspection</h2>
+    <p>Deep packet inspection (DPI) on tarkoitettu verkossa pakettien suodattamiseen. Se estää pakettien pääsyn, jotka eivät noudata tiettyjä kriteerejä, kuten viruksia tai spämmiä. Deep packet inspection siis käy syvällisesti läpi paketit sen sijaan, että katsoo vain otsikon, kuten normaali paketin suodatus tekee. Deep packet inspection on yleensä funktiona käyttäjän palomuurissa. Se arvioi paketin sisällön käyttäen sääntöjä, jotka sinä tai internetin palvelija on antanut sille. Se voi tarkistaa ne ja saada selville mistä paketti tuli, kuten mistä sovelluksesta tai palvelusta se tuli.</p>
+    <h3>Deep packet inspection vs tavanomainen pakettien suodattaminen</h3>
+    <p>Tavanomaisella tavalla paketeista luettiin vain otsikot, sillä teknologia ei ollut vielä niin kehittynyt. Palomuureilla ei ollut tarpeeksi voimaa prosessoida suuria määriä paketteja. Deep packet inspection sen sijaan käy tarkasti läpi paketit.</p>
+    <h3>Tärkeimmät tehtävät</h3>
+    <p>Deep packet inspectionia käytetään tunkeutumisen huomaamiseen tai estoon. Se voi huomata hyökkäyksiä, joita palomuuri ei helposti huomaa. Jos organisaatiossa käytetään läppäreitä töihin, Deep packet inspection on tärkeä osa estämään viruksien ja matojen pääsyä verkkoon. Sitä voi myös käyttää etusijaisille viesteille, jos ne halutaan päästää jonosta läpi heti ennen muita viestejä.</p>
+    <p>Mainostajat voivat myös käyttää sitä kohdennettujen mainosten lähettämiseen.</p>
+  </body>
+</html>

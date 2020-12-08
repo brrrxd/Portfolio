@@ -1,4 +1,41 @@
 window.onload=function(){
+
+var getJSON = function(url, callback) {
+
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', url, true);
+  xhr.responseType = 'json';
+
+  xhr.onload = function(){
+
+    var status = xhr.status;
+
+    if (status == 200) {
+      callback(null, xhr.response);
+    }else {
+      callback(status);
+      }
+    };
+  
+  xhr.send();
+};
+var korona = document.querySelector('.korona');
+var tartunnat = document.querySelector('.tartunnat');
+var testatut = document.querySelector('.testatut');
+var kuolemat = document.querySelector('.kuolemat');
+
+getJSON
+('https://api.apify.com/v2/key-value-stores/jEFt5tgCTMfjJpLD3/records/LATEST?disableRedirect=true', function(err, data){
+  if (err != null) {
+    console.error(err);
+  }else {
+    tartunnat.innerHTML = (`${data.infected}`);
+    korona.innerHTML = (`${data.lastUpdatedAtApify.split('T')[0]}`);
+    testatut.innerHTML = (`${data.tested}`);
+    kuolemat.innerHTML = (`${data.deaths}`);
+  }
+});
+
 const lahetanappi = document.querySelector('.lahetanappi');
 const pakemail = document.querySelector('.pakemail');
 const paknimi = document.querySelector('.paknimi');
@@ -59,4 +96,4 @@ function sendJSON(){
   });
   xhr.send(data);
 };
-}
+};
