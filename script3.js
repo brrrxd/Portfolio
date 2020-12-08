@@ -1,5 +1,3 @@
-window.onload=function(){
-
 var getJSON = function(url, callback) {
 
   var xhr = new XMLHttpRequest();
@@ -37,18 +35,16 @@ getJSON
 });
 
 const lahetanappi = document.querySelector('.lahetanappi');
-const pakemail = document.querySelector('.pakemail');
-const paknimi = document.querySelector('.paknimi');
 const virhe = document.querySelector('.virhe');
 const tiedot = document.querySelector('#tiedot');
 const ree = document.querySelector('#ree');
 const ree2 = document.querySelector('#ree2');
-const terveiset = document.querySelector('.terveiset');
+const terveiset = document.querySelector('#terveiset');
 
 lahetanappi.addEventListener('click', e =>{
   e.preventDefault();
 
-  if(paknimi.value === '' || pakemail.value === ''){
+  if(ree.value === '' || ree2.value === ''){
     document.getElementById("ree").style.backgroundColor="red";
     document.getElementById("ree2").style.backgroundColor="red";
     lahetanappi.style.background = 'red';
@@ -60,12 +56,12 @@ lahetanappi.addEventListener('click', e =>{
   }else{
 
     const li = document.createElement('li');
-    li.appendChild(document.createTextNode(`Viestisi on lähetetty ${paknimi.value} ${pakemail.value}!`));
+    li.appendChild(document.createTextNode(`Viestisi on lähetetty ${ree.value} ${ree2.value}!`));
 
     tiedot.appendChild(li);
 
-    paknimi.value= '';
-    pakemail.value= '';
+    ree.value= '';
+    ree2.value= '';
     sendJSON();
   }
 });
@@ -88,12 +84,17 @@ function sendJSON(){
     if(xhr.readyState === 4 && xhr.status === 200)
     console.log("Valmis, yhteys toimii");
   };
+  const nimi = document.querySelector('#ree').value;
+  const email = document.querySelector('#ree2').value;
+  const viestit = document.querySelector('#terveiset').value;
+
+  console.log(nimi);
+
   var data =JSON.stringify({
-    "EmailMsg": terveiset, //kirjoittaa sähköpostin sisällön
-    "EmailAddress": pakemail, //viestin kirjoittajan sähköpostin
-    "EmailTo": "matias.kallio@edu.salpaus.fi", //oma sähköpostin
-    "EmailName": paknimi //Nimi kentän sisältö
+   "EmailMsg": viestit,  //Kirjoittaa sisällön 
+    "EmailAddress": email, //viestin kirjoittajan sähköposti
+    "EmailTo": "matias.kallio@edu.salpaus.fi", //oma sähköpostisi!!!!
+    "EmailName": nimi //Nimi-kentän sisältö
   });
   xhr.send(data);
-};
 };
