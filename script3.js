@@ -48,7 +48,7 @@ lahetanappi.addEventListener('click', e =>{
     document.getElementById("ree").style.backgroundColor="red";
     document.getElementById("ree2").style.backgroundColor="red";
     lahetanappi.style.background = 'red';
-    lahetanappi.value= 'Virhe! Et lisännyt nimeä tai sähköpostia.'
+    lahetanappi.value = 'Virhe! Et lisännyt nimeä tai sähköpostia.'
     setTimeout(()=> lahetanappi.style.background = 'rgb(255,255,255)', 6000);
     setTimeout(()=> lahetanappi.value = 'Lähetä', 6000);
     setTimeout(()=> document.getElementById("ree").style.backgroundColor="white", 6000);
