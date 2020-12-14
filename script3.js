@@ -74,7 +74,7 @@ emailnappi.addEventListener('click', e =>{
 
 function sendJSON(){
   let xhr = new XMLHttpRequest();
-  let url = "https://salpausemail.azurewebsites.net/api/HttpTriggerCSharp1?code=lWOELqiU07AqsBviOQYzuNIrQP7xoV7NV7C5W2ctgjIRcf7nXE2biw==";
+  let url = "https://salpausemail.azurewebsites.net/api/HttpTriggerCSharp2?code=PnWhScmEcspN8Fy7eYKnIZA37AFgUZ0fMQ1OpXOJ6dtBPBGNXAMIqQ==";
 
   xhr.open("POST", url, true);
 
@@ -88,12 +88,9 @@ function sendJSON(){
   const email = document.querySelector('#ree2').value;
   const viestit = document.querySelector('#terveiset').value;
 
-  console.log(nimi);
-
   var data =JSON.stringify({
-   "EmailMsg": viestit,  //Kirjoittaa sisällön 
-    "EmailAddress": email, //viestin kirjoittajan sähköposti
-    "EmailTo": "matias.kallio@edu.salpaus.fi", //oma sähköpostisi!!!!
+    "EmailMsg": viestit,  //Kirjoittaa sisällön 
+    "EmailTo": "matias.kallio", //oma sähköpostisi!!!!
     "EmailName": nimi //Nimi-kentän sisältö
   });
   xhr.send(data);
